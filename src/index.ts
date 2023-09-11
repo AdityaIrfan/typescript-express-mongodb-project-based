@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from 'express'
 
 const app: Application = express()
 
-const port: Number = 4000
+const port: number = 4000
 
 app.get('/health', (req: Request, res: Response) => {
   return res.status(200).json({
