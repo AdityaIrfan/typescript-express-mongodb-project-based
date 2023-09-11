@@ -1,0 +1,43 @@
+{
+  "name": "typescript-express-mongodb-project-based",
+  "version": "1.0.0",
+  "description": "express and mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc -w",
+    "dev": "npx nodemon",
+    "build": "tsc",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdityaIrfan/typescript-express-mongodb-project-based.git"
+  },
+  "author": "aditya irfan junianto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdityaIrfan/typescript-express-mongodb-project-based/issues"
+  },
+  "homepage": "https://github.com/AdityaIrfan/typescript-express-mongodb-project-based#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.49.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "prettier": "3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
