@@ -1,5 +1,5 @@
 import * as process from 'process'
-import * as fs from 'fs'
+// import * as fs from 'fs'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -7,10 +7,88 @@ dotenv.config()
 const CONFIG = {
   DB: process.env.DB_MONGO,
   JWT: {
-    PRIVATE_KEY: fs.readFileSync(__dirname.replace('src/config', 'private_key.pem'), 'utf8'),
-    PUBLIC_KEY: fs.readFileSync(__dirname.replace('src/config', 'public_key.pem'), 'utf8'),
-    REFRESH_PRIVATE_KEY: fs.readFileSync(__dirname.replace('src/config', 'refresh_private_key.pem'), 'utf8'),
-    REFRESH_PUBLIC_KEY: fs.readFileSync(__dirname.replace('src/config', 'refresh_public_key.pem'), 'utf8')
+    // PRIVATE_KEY: fs.readFileSync(__dirname.replace('src/config', 'private_key.pem'), 'utf8'),
+    // PUBLIC_KEY: fs.readFileSync(__dirname.replace('src/config', 'public_key.pem'), 'utf8'),
+    // REFRESH_PRIVATE_KEY: fs.readFileSync(__dirname.replace('src/config', 'refresh_private_key.pem'), 'utf8'),
+    // REFRESH_PUBLIC_KEY: fs.readFileSync(__dirname.replace('src/config', 'refresh_public_key.pem'), 'utf8')
+    PRIVATE_KEY: `-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCQWd7TjjB4TAes
+5+RFVt/rW79sLKBAqUUchhdRU7EDMSohEN8KuvHKmMmRAiYCx89ooDQD0CUeey/2
+1RV+r+OykesJ1mZqzsolUU7vwbC4Ahb+njtjF5KwlsxOZGrwwWzTSCJ2N1S0kENg
+rUczt/Fq6eM7S5o2hbOJd7k2Gd/yHNHaxbLt8TpX0olMOJvY+CebA2hrygV7p3Ue
+rDVwFxqGJiZlYOtlxK7EbVCHucjMjwny/6WmorG+XaqI3t8/LTdd5TytJavRkxs9
+21RNr83Ihdd7zXNqsLUwGX/Vkjeis4YiARB1JX+a4Jo9d4AhIEs2srzX0mR+AdOK
+LGQ55zVhAgMBAAECggEAFsOddhu70r9xYcKgxzs9N8bHEsjyLWWkU6xlJqWon3oU
+Nz+2X4uouuGfvqGp8JFQc6L5YPU6YqqxnzRDs1q18VYSogFbiGd7uH6F5h3TqnO7
+QER1gBnaam/K4L1JohXBfYuoJ6AagxknDwAfNO2YAbDIbXRC6cCUViROeH+Ecg/9
+xAg6aWRSyxQr94QL15F9ZhiFpUA5EsbmzKoWvJxSzqhIXs9/IjG0MtKN7hsFll6B
+tBOTbP67+Dw4J4l8vBoyFN4DccinyWssOBw3IFUETWWu0HebQGHUF5a00Tm3Nl+s
+zkFyz4is0+8mAMW6/Hl+uYj8tVIRdlR6bghfrFAm0wKBgQDHrYF8y/yPazCsUeRD
+g1nIGIXBLROKHs4rh5JPrLN/HGVqBKWUa9/GLVKLkeIJkdQu8mHe7xzUCcZN0HMp
+yxmBrq9UOGmzj8E//8Rks+XsUJmTMqLQtok3ZRg4PDT4F8Z9wFVQC0nPc6zAIMLn
+MaBPzc1j9AfAu8q1vFQ9nJxnVwKBgQC5EUoDWw+RNRwNLeqYCy1biUNhaHQEOE9Q
+TA45ogoIhCrqP8ytBY53/5w/S12l0oqrDNZhGeV2OeoFkM1T/pMtxV5yzwBNwrf6
+EM/gvvXcPXInlyTSVhnycsrXlV8SAVyCR5DEdJ749QYN3+1OOpgbZ0Bvrss6JqiG
+2j8Z9e9uBwKBgGXEFv98ky6hCcB5SCXkdsiVPu4SRCgbxSXIRZhXw2+gEEu1LJJ1
+XCoLhUtewV3xNbvrilftc7rZdHjKKTd+rHQ8jF0XF0ANnwc4GmbcjO0gsvSjVPmc
+XlieLHbUsIZUz7PdZ12RM0AIi12sFMlxsGubzvcHM0BWNVzkK+buv4OnAoGAFknr
+xQ2xiUaBM2ElUNx/wPd+IvwmhN+XRc9zIyPN24q3dHDsoKX7q54gXksgYzlBNCqe
+oyEwTpXZBoSTBhux9CBCKMeffL4H1Fk0ABhfmf/YgMYmTCLMizOiFGbMBWoejx45
+ZD+7abZw3Tjr5rEN4rcDvq+pkD5Zq6wbT3AcPv8CgYEAuQa+N8brr+mzM1CIWcpl
+4CVW3k50SKD0QkQkonA+R6/kwnvtuZNgZdxJdaXj4qP2KHpcddnERdPZF5IcUWky
+N8Th2W/xSn2q8xiYHpLpM7OAO5ZOUcTIDjFoxmlcdxOAAr4J7O02U3SJU0LMaa45
+OiXEdozCDiKRm+MPoju8sT8=
+-----END PRIVATE KEY-----
+`,
+    PUBLIC_KEY: `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkFne044weEwHrOfkRVbf
+61u/bCygQKlFHIYXUVOxAzEqIRDfCrrxypjJkQImAsfPaKA0A9AlHnsv9tUVfq/j
+spHrCdZmas7KJVFO78GwuAIW/p47YxeSsJbMTmRq8MFs00gidjdUtJBDYK1HM7fx
+aunjO0uaNoWziXe5Nhnf8hzR2sWy7fE6V9KJTDib2PgnmwNoa8oFe6d1Hqw1cBca
+hiYmZWDrZcSuxG1Qh7nIzI8J8v+lpqKxvl2qiN7fPy03XeU8rSWr0ZMbPdtUTa/N
+yIXXe81zarC1MBl/1ZI3orOGIgEQdSV/muCaPXeAISBLNrK819JkfgHTiixkOec1
+YQIDAQAB
+-----END PUBLIC KEY-----
+`,
+    REFRESH_PRIVATE_KEY: `-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDlQ+W3tU4+abth
+CFicbtSkUSpuZ+uI/B0xRgt0H1JWDTssvSNTxcVfCZV6HMm6zSPS9/hbluq0Gctz
+9O1M17GpvHldj1NDa4W6tFuYtdiegOpu6N/2eZ0dJ7/GVoUYY4vW+0W89WNZ3Nuj
+xhZHgf+Wg3MiO51X1af9xQKWYSsSep2rb1s5Cr9iADC2weFqfWOHztEaVjlTeVZn
+mcBoOwmA+jgnJBJYB7tAngBidyoKVjj/3vdZcMHPGtUNoWyqVNF3PWhKf7NYgTrj
+PWqsygdmKIBPeY7Yh3X1dZhh1ydt0fPZjwH62Wb0YAEsVlHqs6g24+SxQS5aZJlz
+dv73+vX/AgMBAAECggEABdldmvo9LMp1xVv5JsSNGEQZ2Qc9sxj7ha5LzIKgDyH3
+SITqydBZ4LrV3W+uld119IPvCicnhcDCuAqfoz49gh8U2ZY2gZnUp5bCX3sEM8cG
+NB4s2JTxtTS2Z9D9REoF30450UBRcJF56Qu8tcZTRvvDjDQJJ5yD1K2aC0wfVTFP
+R+C7UtSRwX0aB7f1c5gy30vzVj23s6OrkmzM0tfYEPfrSqTUOreYbVnurr7qqTyF
+w8byG4xdpZfiZNkU1nObKx5VBKEUMheCi4N5mn2WKZxG/RNgnWdi9+ysOsx3RxaJ
+1cpogNJavudRQ/MRv9ew59FCKjehruq5CQVchjMjgQKBgQDzEqsKHZ0DOCA/2CEN
+FdQNCNDLXU+EetY0DpnAu+GM36yNqOvegbAROtKbAReN6dvJy5V2NHEnxLauIqFE
+Wn0MoV9WYsdIZQ/+EFHjWrQAOwqcVXzZ519g27vYEImrQ6tRclhZJO8IwJxq21go
+pf51qO2+OLmy4o0FEFPw2ZYxJwKBgQDxdT5Qj88F9Ceric6VUVi7A3WoT9mzaeG5
+TLG4r08+CWuiwFg4zmhUv511MzIS6rVhr0dg6nAbk/SwmtntltFlfXJCcmxZUTDV
+eJUA5TIZqiF5NGtMtSMgOtov3NUg+rcHZ8noCOxFgxC6kAXc4UWea1VjLsLneteW
+Q4kYmO7raQKBgQC7gl8nQojo/tcB6Tw11+zo0TAgcS7yR8AOEGVTZJwuDC4UaYbq
+8qhb4kCtCj6dXxYJqV72/KV9xCYYVuaI0DU/FQ1ymmiY1D1uBDDnbgUFWIZq6xeR
+EQdmtJtHphpNX7o87jRxMCilW9BOLj7nvIV7RoGACEpYUKPwkBPw7CkMaQKBgDcO
+5Qa5xBs3cVRMOC8UPYdnYozeqGWg3zfBpUTXtNoQi9qwwW0yo9evWdg/tEtb+cAs
+l7ohuy6Orl0W8lqa6WSbFlLQhKRZPyluNYvet23ivX9F1LHJHBldUiNX18GNae7m
+W8PtRPMUz9u6u5uCQr28+9uB7i+ac05wV/Kj7NcBAoGBANwr+bNVeCfdsm4OViRC
+RaY0v1HpCMYhH6Nb2L/MqoaT4NsO3Zg5BvXEMc+vsz/sX40nHylp23WhyCTiFtw7
+vY6Gbh3CbAz8wCYppQRSsH4+6V/peV0tKpMtU9IykSg2AnmB6Dy4N8VaVC2n1eEH
+VvZKqxnDu/dx84DEWXMrGpW5
+-----END PRIVATE KEY-----
+`,
+    REFRESH_PUBLIC_KEY: `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5UPlt7VOPmm7YQhYnG7U
+pFEqbmfriPwdMUYLdB9SVg07LL0jU8XFXwmVehzJus0j0vf4W5bqtBnLc/TtTNex
+qbx5XY9TQ2uFurRbmLXYnoDqbujf9nmdHSe/xlaFGGOL1vtFvPVjWdzbo8YWR4H/
+loNzIjudV9Wn/cUClmErEnqdq29bOQq/YgAwtsHhan1jh87RGlY5U3lWZ5nAaDsJ
+gPo4JyQSWAe7QJ4AYncqClY4/973WXDBzxrVDaFsqlTRdz1oSn+zWIE64z1qrMoH
+ZiiAT3mO2Id19XWYYdcnbdHz2Y8B+tlm9GABLFZR6rOoNuPksUEuWmSZc3b+9/r1
+/wIDAQAB
+-----END PUBLIC KEY-----
+`
   }
 }
 
