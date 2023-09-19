@@ -1,14 +1,33 @@
-import express, { Application, Request, Response } from 'express'
+import bodyParser from 'body-parser'
+import cors from 'cors'
+import express, { Application, NextFunction, Request, Response } from 'express'
+import { logger } from './utils/logger'
+import { routes } from './routes'
+
+// connect DB
+import './utils/connectDB'
+import { DeserializedToken } from './middleware/deserializedToken'
 
 const app: Application = express()
-
 const port: number = 4000
 
-app.get('/health', (req: Request, res: Response) => {
-  return res.status(200).json({
-    message: "i'm healthy"
-  })
+// Parse body request
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+// Cors access handlers
+app.use(cors())
+app.use((req: Request, res: Response, next: NextFunction) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', '*')
+  res.setHeader('Access-Control-Allow-Header', '*')
+  next()
 })
+
+app.use(DeserializedToken)
+
+routes(app)
+
 app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`)
+  logger.info(`Server is listening on port ${port}`)
 })
